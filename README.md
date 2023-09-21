@@ -19,5 +19,7 @@ There are 3 users available to use: 'user1', 'user2', and 'user3'.
 ## To-Dos/Next Steps 
 
 1- Use headers or token for authorization 
+
 2- Remove security checks from each individual method and include as a "before_action" check in the controller 
+
 3- Implement more robust and informative error messaging 

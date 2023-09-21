@@ -12,7 +12,7 @@
 
 ## Making API Calls 
 
-This app authorizes API requests through checking the username, which it expects to be sent as a URL param. 
+This app authorizes API requests through checking the username, which it expects to be sent as a URL param called "self". 
 
 There are 3 users available to use: 'user1', 'user2', and 'user3'. 
 

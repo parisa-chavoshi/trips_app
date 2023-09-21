@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "trips#index"
-  resources :trips do 
+  resources :trips, only: [:index, :create] do 
     member do 
       post :reassign
       patch :checkin 

@@ -5,7 +5,7 @@ class TripsController < ApplicationController
     end
     
     def create 
-      assignee = User.find(trip_params[:assignee])
+      assignee = User.find_by(username: trip_params[:assignee])
       trip = Trip.create(
           owner: current_user, 
           assignee: assignee, 
@@ -15,16 +15,11 @@ class TripsController < ApplicationController
       render :json => trip
     end 
 
-    def update 
-      trip = Trip.find(params[:id])
-      return unless trip.owner == current_user || trip.assignee == current_user
-    end 
-
     def reassign 
       og_trip = Trip.find(params[:id])
       return unless og_trip.can_be_reassigned_by?(current_user)
 
-      assignee = User.find(trip_params[:assignee])
+      assignee = User.find_by(username: trip_params[:assignee])
 
       reassigned_trip = Trip.create(
         owner: current_user,

@@ -3,8 +3,11 @@
 ## How to run this application: 
 
 1- Navigate to the top-level directory. 
-2- Run `bundle install` to install all libraries and packages
+
+2- Run `bundle install` to install all libraries and packages 
+
 3- Run `rails db:migrate:reset db:seed` to set up the database and initialize users
+
 4- Run `rails s` to begin the application 
 
 ## Making API Calls 
